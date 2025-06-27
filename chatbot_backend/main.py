@@ -1,3 +1,5 @@
+
+
 from fastapi import FastAPI, HTTPException, status
 from pydantic import BaseModel
 import google.generativeai as genai
@@ -30,6 +32,7 @@ origins = [
     "http://127.0.0.1:3000",     
     "http://localhost:8000",       
     "http://127.0.0.1:8000",     
+    "http://127.0.0.1:5500",      # Added for local Live Server
 
     # IMPORTANT: I will add the actual deployed URL(s) of our frontend website here.
     
@@ -39,8 +42,8 @@ origins = [
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,          # List of origins that are allowed to make requests
-    allow_credentials=True,         # Allowing cookies to be included in cross-origin requests
+    allow_origins=["*"],          # List of origins that are allowed to make requests
+    allow_credentials=False,         # Allowing cookies to be included in cross-origin requests
     allow_methods=["*"],            # Allowing all standard HTTP methods (GET, POST, PUT etc.)
     allow_headers=["*"],            # Allowing all headers from the frontend in cross-origin requests
 )
@@ -99,3 +102,7 @@ async def chat_with_bot(request: ChatRequest):
 async def read_root():
     return {"message": "Totot Traditional Restaurant Chatbot API is running. Visit /docs for API documentation."}
 
+if __name__ == "_main_":
+    import uvicorn
+    # Run the FastAPI app with Uvicorn server
+    uvicorn.run(app, host="0.0.0.0", port=8000)

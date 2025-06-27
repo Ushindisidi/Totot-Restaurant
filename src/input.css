@@ -1,3 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+/* Typewriter cursor animation */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/* Import Playfair Display from Google Fonts */
+
+/* Apply Playfair Display to the entire document */
+body {
+  font-family: "Playfair Display", serif;
+}
+.typewriter-cursor {
+  display: inline-block;
+  width: 2px;
+  background: white;
+  margin-left: 2px;
+  animation: blink 1s step-end infinite;
+}
+
+/* Slide animation classes */
+.slide-in {
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.slide-out {
+  animation: slideOut 1s ease-in-out forwards;
+}
+
+/* Overlay to darken images for better text visibility */
+.slide::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+/* Button gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.button-gradient {
+  background: linear-gradient(45deg, #6b4226, #8b5a2b, #a67c52, #8b5a2b);
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+  box-shadow: 0 4px 15px rgba(139, 90, 43, 0.4);
+}
+
+.button-gradient:hover {
+  animation: gradientShift 3s ease infinite;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(139, 90, 43, 0.6);
+}
+
+.button-gradient:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 10px rgba(139, 90, 43, 0.4);
+}

@@ -11,6 +11,10 @@ module.exports = {
         menu: "#FFF1C6",
         "menu-title": "#4A3A0C",
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+      },
     },
   },
   plugins: [],

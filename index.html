@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
   </head>
 
   <body
-    class="min-h-screen text-black bg-slate-50 dark:bg-black dark:text-white"
+    class="box-border min-h-screen text-black bg-slate-50 dark:bg-black dark:text-white"
   >
     <header
       class="sticky top-0 z-10 text-black bg-customBrown dark:bg-brown-900 dark:text-white"
@@ -40,6 +40,7 @@
               class="bg-white rounded w-8 h-1 top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:transition-all before:duration-500 before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-3"
             ></div>
           </button>
+
           <nav
             class="hidden mr-10 space-x-8 text-xl md:block"
             aria-label="main"
@@ -69,7 +70,10 @@
           <a href="#menu" class="w-full py-6 text-center hover:opacity-90"
             >Menu</a
           >
-          <a href="#our_story" class="w-full py-6 text-center hover:opacity-90"
+
+          <a
+            href="#our_story"
+            class="w-full py-6 text-center hover:opacity-90"
             >Our Story</a
           >
           <a href="#dishes" class="w-full py-6 text-center hover:opacity-90"
@@ -108,361 +112,400 @@
       </div>
     </div>
 
-    <main>
-      <section class="bg-menu dark:bg-slate-950">
-        <section class="container w-full px-4 py-12 mx-auto">
-          <div class="flex items-center justify-between mb-8">
-            <div>
-              <h2
-                class="mb-2 text-3xl font-bold text-menu-title dark:text-white"
-              >
-                Signature Dishes
-              </h2>
-              <p class="font-sans font-normal">
-                Savor the authentic flavors of Ethiopia.
-              </p>
-            </div>
-
-            <a
-              href="#"
-              class="text-sm font-semibold transition-colors duration-300 text-brown-500 hover:text-brown-700 dark:text-brown-300 dark:hover:text-brown-500"
-              >View All</a
-            >
+    <main class="h-auto">
+      <section
+        id="story"
+        class="p-5 min-h-screen flex flex-col md:flex-col md:flex bg-[#d2b48c] dark:bg-black md:pt-20"
+      >
+        <div class="md:h-[500px] flex flex-col md:flex-row">
+          <div
+            class="max-w-2xl p-5 pt-20 mb-6 text-center border-solid rounded-lg shadow-2xl content dark:shadow-slate-500/50 dark:shadow-2xl md:w-1/2"
+          >
+            <h1 class="mb-3 text-3xl font-bold font-playfair">
+              Our Story: From Humble Beginnings to a Culinary Landmark
+            </h1>
+            <p class="p-2 text-sm leading-relaxed font-inter font-extralight">
+              At Totot, our story is a testament to perseverance, passion, and
+              the rich tapestry of Ethiopian culture. It all began with Tenkir
+              Teni, a shoeshine boy in Addis Ababa with an unyielding dream.
+              Through sheer hard work and determination, Tenkir transformed his
+              humble beginnings into a thriving restaurant venture. Established
+              in 2001 E.C. (Ethiopian Calendar), Totot—a name derived from the
+              Gurage language meaning "let's work"—embodies the spirit of effort
+              and dedication that built it.
+            </p>
           </div>
-
-          <!-- Menu Cards Grid -->
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <!-- Card 1 -->
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/kitfo-1.jpg"
-                  alt="Totot Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Totot Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Classic</p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Savory ground beef seasoned with Ethiopian spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $15
-                </p>
-              </div>
-              <!-- Hover overlay effect -->
-            </div>
-
-            <!-- Card 2 -->
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/ekot.jpg"
-                  alt="Ekot"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Ekot
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Minced Cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Finely chopped cabbage seasoned with herbs.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $20
-                </p>
-              </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/Finta fento.jpg"
-                  alt="Finta Fento"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Finta Fento
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Spicy kitfo sauce with cheese
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  A spicy blend of kitfo sauce topped with melted cheese.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $22
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/kitfo-1.jpg"
-                  alt="Totot Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Totot Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">Classic</p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Savory ground beef seasoned with Ethiopian spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $15
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
-            <div
-              class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
-            >
-              <div class="overflow-hidden">
-                <img
-                  src="./base/images/gomen kitfo.jpg"
-                  alt="Gomen Kitfo"
-                  class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
-                />
-              </div>
-              <div class="p-5">
-                <h3 class="text-xl font-bold text-gray-800 dark:text-white">
-                  Gomen Kitfo
-                </h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400">
-                  Classic kitfo with cabbage
-                </p>
-                <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
-                  Ground beef mixed with fresh cabbage and traditional spices.
-                </p>
-                <p
-                  class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
-                >
-                  $18
-                </p>
-              </div>
-            </div>
+          <div class="w-auto h-auto p-5 ml-5 story-image md:w-1/2">
+            <figure>
+              <img
+                src="base/images/Screenshot 2025-06-24 221722.png"
+                alt="founder-img"
+                class="rounded-lg shadow-lg h-auto pt-10 max-h-[450px]"
+              />
+              <figcaption></figcaption>
+            </figure>
           </div>
-        </section>
+        </div>
+        <div
+          class="flex flex-row justify-center mb-5 ml-10 space-x-4 font-bold md:text-3xl text-customBrown md:mt-20"
+        >
+          <p>Heritage</p>
+          <p>Community</p>
+          <p>Freshness</p>
+        </div>
       </section>
     </main>
+    <section class="bg-menu dark:bg-slate-950">
+      <section class="container w-full px-4 py-12 mx-auto">
+        <div class="flex items-center justify-between mb-8">
+          <div>
+            <h2 class="mb-2 text-3xl font-bold text-menu-title dark:text-white">
+              Signature Dishes
+            </h2>
+            <p class="font-sans font-normal">
+              Savor the authentic flavors of Ethiopia.
+            </p>
+          </div>
+
+          <a
+            href="#"
+            class="text-sm font-semibold transition-colors duration-300 text-brown-500 hover:text-brown-700 dark:text-brown-300 dark:hover:text-brown-500"
+            >View All</a
+          >
+        </div>
+
+        <!-- Menu Cards Grid -->
+        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Card 1 -->
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/kitfo-1.jpg"
+                alt="Totot Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Totot Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Classic</p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Savory ground beef seasoned with Ethiopian spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $15
+              </p>
+            </div>
+            <!-- Hover overlay effect -->
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/ekot.jpg"
+                alt="Ekot"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Ekot
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Minced Cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Finely chopped cabbage seasoned with herbs.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $20
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/Finta fento.jpg"
+                alt="Finta Fento"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Finta Fento
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Spicy kitfo sauce with cheese
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                A spicy blend of kitfo sauce topped with melted cheese.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $22
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/kitfo-1.jpg"
+                alt="Totot Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Totot Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">Classic</p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Savory ground beef seasoned with Ethiopian spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $15
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+          <div
+            class="relative overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-md dark:bg-gray-800 group hover:shadow-lg hover:-translate-y-1"
+          >
+            <div class="overflow-hidden">
+              <img
+                src="./base/images/gomen kitfo.jpg"
+                alt="Gomen Kitfo"
+                class="object-cover w-full h-48 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="p-5">
+              <h3 class="text-xl font-bold text-gray-800 dark:text-white">
+                Gomen Kitfo
+              </h3>
+              <p class="text-sm text-gray-600 dark:text-gray-400">
+                Classic kitfo with cabbage
+              </p>
+              <p class="mt-2 text-sm text-gray-500 dark:text-gray-300">
+                Ground beef mixed with fresh cabbage and traditional spices.
+              </p>
+              <p
+                class="mt-3 text-lg font-bold text-brown-500 dark:text-brown-300"
+              >
+                $18
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
   </body>
 </html>

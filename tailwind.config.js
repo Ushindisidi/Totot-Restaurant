@@ -7,6 +7,10 @@ module.exports = {
       colors: {
         customBrown: "#8C3D24",
       },
+      fontFamily: {
+        inter: ['Inter', 'sans-serif'],
+        playfair: ['"Playfair Display"', 'serif'],
+      },
     },
   },
   plugins: [],

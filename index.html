@@ -7,68 +7,111 @@
     <link rel="stylesheet" href="base/css/style.css" />
     <script src="base/js/main.js" defer></script>
   </head>
-  
-  <body class="min-h-screen bg-slate-50 text-black dark:bg-black dark:text-white box-border ">
-    <header class="bg-customBrown text-black sticky top-0 z-10 dark:bg-brown-900 dark:text-white">
-      <section class="max-w-[1200px] mx-auto p-4 flex justify-between items-center">
+
+  <body
+    class="min-h-screen text-black bg-slate-50 dark:bg-black dark:text-white box-border"
+  >
+    <header
+      class="sticky top-0 z-10 text-black bg-customBrown dark:bg-brown-900 dark:text-white"
+    >
+      <section
+        class="max-w-[1200px] mx-auto p-4 flex justify-between items-center"
+      >
+
         <div class="text-3xl font-medium">
-            <img src="base/images/toto logo.png" alt="Toto Logo" class="w-9 h-9" />
+          <img
+            src="base/images/toto logo.png"
+            alt="Toto Logo"
+            class="w-9 h-9"
+          />
         </div>
         <div>
-          <button id="theme-toggle" class=" text-2xl absolute -translate-x-20">
+          <button id="theme-toggle" class="absolute text-2xl -translate-x-20">
             &#127769;
           </button>
           <button
-            id="hamburger-button" 
-            class="text-3xl md:hidden focus:outline-none cursor-pointer relative w-8 h-8"
+            id="hamburger-button"
+            class="relative w-8 h-8 text-3xl cursor-pointer md:hidden focus:outline-none"
           >
             <div
               class="bg-white rounded w-8 h-1 top-4 -mt-0.5 transition-all duration-500 before:content-[''] before:bg-white before:w-8 before:h-1 before:rounded before:absolute before:transition-all before:duration-500 before:-translate-x-4 before:-translate-y-3 after:content-[''] after:bg-white after:w-8 after:h-1 after:rounded after:absolute after:transition-all after:duration-500 after:-translate-x-4 after:translate-y-3"
             ></div>
           </button>
-          <nav class="hidden md:block space-x-4 text-xl mr-10" aria-label="main">
+
+          <nav
+            class="hidden mr-10 space-x-8 text-xl md:block"
+            aria-label="main"
+          >
+
             <a href="#hero" class="hover:opacity-90">Home</a>
-            <a href="#menu" class="hover:opacity-90">Menu 
-                <span  >&#9660;</span></a>
+            <a href="#menu" class="hover:opacity-90"
+              >Menu <span>&#9660;</span></a
+            >
             <a href="#story" class="hover:opacity-90">Our Story</a>
             <a href="#dishes" class="hover:opacity-90">Signature Dishes</a>
             <a href="#feedback" class="hover:opacity-90">Feedback Form</a>
-        
           </nav>
-  
-          
         </div>
       </section>
 
       <section
         id="mobile-menu"
-        class="hidden absolute top-16 text-white bg-black w-full text-3xl  flex-col justify-center origin-top animate-open-menu"
+        class="absolute flex-col justify-center hidden w-full text-3xl text-white origin-top bg-black top-16 animate-open-menu"
       >
         <nav
-          class="flex flex-col min-h-screen items-center py-8"
+          class="flex flex-col items-center min-h-screen py-8"
           aria-label="mobile"
         >
-          <a href="#hero" class="w-full text-center hover:opacity-90 py-6"
+          <a href="#hero" class="w-full py-6 text-center hover:opacity-90"
             >Home</a
           >
-          <a href="#menu" class="w-full text-center hover:opacity-90 py-6"
+          <a href="#menu" class="w-full py-6 text-center hover:opacity-90"
             >Menu</a
           >
-          <a
-            href="#story"
-            class="w-full text-center hover:opacity-90 py-6"
+
+          <a href="#our_story" class="w-full py-6 text-center hover:opacity-90 py-6"
+
             >Our Story</a
           >
-          <a href="#dishes" class="w-full text-center hover:opacity-90 py-6"
+          <a href="#dishes" class="w-full py-6 text-center hover:opacity-90"
             >Signature Dishes</a
           >
-          <a href="#feedback" class="w-full text-center hover:opacity-90 py-6"
+          <a href="#feedback" class="w-full py-6 text-center hover:opacity-90"
             >Feedback Form</a
           >
         </nav>
       </section>
       </header>
-      <main class="h-auto">
+
+
+    <div id="hero-section" class="relative h-screen overflow-hidden">
+      <!-- Slides Container -->
+      <div id="slides-container" class="relative w-full h-full">
+        <!-- Slides will be inserted here by JavaScript -->
+      </div>
+
+      <!-- Overlay Content (fixed position over slides) -->
+      <div
+        class="absolute inset-0 z-10 flex flex-col items-center justify-center px-4 text-center text-white"
+      >
+        <!-- Typewriter Animation Container -->
+        <h1
+          id="restaurant-name"
+          class="mb-4 text-4xl font-bold md:text-5xl font-playfair text-pretty"
+        ></h1>
+
+        <p class="max-w-2xl mb-8 text-xl">Where Every Bite Tells a Story</p>
+        <!-- CTA Button -->
+        <button
+          class="relative px-8 py-3 text-lg font-bold text-white rounded-md bg-gradient-to-r from-ethiopian-red to-ethiopian-dark"
+        >
+          Explor Our Menu
+        </button>
+      </div>
+    </div>
+     
+
+          <main class="h-auto">
         <section id="story" class="p-5 min-h-screen  flex flex-col md:flex-col md:flex bg-[#d2b48c] dark:bg-black md:pt-20"
         >
              <div class="md:h-[500px] flex flex-col md:flex-row">
@@ -90,6 +133,8 @@
              </div>
 
          </section>
-      </main>
+            
+             </main>
+
   </body>
 </html>

@@ -4,11 +4,10 @@ import google.generativeai as genai
 import os
 from dotenv import load_dotenv
 import asyncio # Required for async operations
+from fastapi.middleware.cors import CORSMiddleware
 
 # Import the restaurant information
 from restaurant_info import RESTAURANT_INFO
-
-# --- Initial setup ---
 # Load environment variables from .env file 
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -23,6 +22,28 @@ genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
 
 app = FastAPI(title="Totot Traditional Restaurant Chatbot API")
+
+
+# --- CORS Configuration --- 
+origins = [
+    "http://localhost:3000",       
+    "http://127.0.0.1:3000",     
+    "http://localhost:8000",       
+    "http://127.0.0.1:8000",     
+
+    # IMPORTANT: I will add the actual deployed URL(s) of our frontend website here.
+    
+    "https://our-totot-restaurant.com",
+    "https://www.our-totot-restaurant.com",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,          # List of origins that are allowed to make requests
+    allow_credentials=True,         # Allowing cookies to be included in cross-origin requests
+    allow_methods=["*"],            # Allowing all standard HTTP methods (GET, POST, PUT etc.)
+    allow_headers=["*"],            # Allowing all headers from the frontend in cross-origin requests
+)
 
 # --- Pydantic Models for Chat ---
 # Defines the structure of the incoming request body

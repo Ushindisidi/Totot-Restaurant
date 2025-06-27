@@ -1,5 +1,6 @@
 //theme toggle
-const themeToggle = document.getElementById('theme-toggle')
+document.addEventListener('DOMContentLoaded',()=>{
+    const themeToggle = document.getElementById('theme-toggle')
     themeToggle.addEventListener("click", ()=>{
         const htmlElement =document.documentElement;
         htmlElement.classList.toggle("dark");
@@ -10,8 +11,9 @@ const themeToggle = document.getElementById('theme-toggle')
             themeToggle.textContent =" 🌙";
         }
     });
+})
 //hambugger display
-document.addEventListener('DOMContentLoaded', initApp)
+
 const initApp = () => {
     const hamburgerBtn = document.getElementById('hamburger-button')
     const mobileMenu = document.getElementById('mobile-menu')
@@ -25,3 +27,4 @@ const initApp = () => {
     hamburgerBtn.addEventListener('click', toggleMenu)
     mobileMenu.addEventListener('click', toggleMenu)
 }
+document.addEventListener('DOMContentLoaded', initApp)

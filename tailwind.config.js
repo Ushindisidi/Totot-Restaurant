@@ -10,10 +10,11 @@ module.exports = {
         "ethiopian-dark": "#26100A",
         menu: "#FFF1C6",
         "menu-title": "#4A3A0C",
+        "contact-bg": "#93532A",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        playfair: ['"Playfair Display"', 'serif'],
+        inter: ["Inter", "sans-serif"],
+        playfair: ['"Playfair Display"', "serif"],
       },
     },
   },

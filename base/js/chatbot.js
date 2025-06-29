@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://totot-restaurant.onrender.com";
+const BACKEND_URL = "https://totot-restaurant-5.onrender.com";
 
 // --- DOM Elements ---
 const chatInput = document.getElementById("chatInput");

@@ -1,20 +1,18 @@
-// Configuration - Update this with your actual backend URL
 const BACKEND_URL = "https://totot-restaurant.onrender.com";
 
 // --- DOM Elements ---
 const chatInput = document.getElementById("chatInput");
 const sendMessageButton = document.getElementById("sendMessageButton");
 const chatDisplay = document.getElementById("chatDisplay");
-const quickQuestionButtons = document.querySelectorAll("button"); // Selects all buttons, filter by ID later
+const quickQuestionButtons = document.querySelectorAll("button"); 
 
-// --- Helper: Add a message bubble ---
+// ---  Add a message bubble ---
 function addMessageToChat(message, isUser = true) {
     const chatDisplay = document.getElementById('chatDisplay');
     const messageDiv = document.createElement('div');
     messageDiv.className = `mb-4 ${isUser ? 'text-right' : 'text-left'}`;
 
     const messageBubble = document.createElement('div');
-    // Using the TailwindCSS classes you had in your index.html script
     messageBubble.className = `inline-block max-w-xs lg:max-w-md px-4 py-2 rounded-lg ${isUser
         ? 'bg-blue-500 text-white rounded-br-none'
         : 'bg-white text-gray-800 rounded-bl-none shadow-md'
@@ -61,7 +59,6 @@ async function sendMessage(message = chatInput.value.trim()) {
     showTypingIndicator(); // Show typing indicator
 
     try {
-        // Correctly append /chat to the BACKEND_URL
         const response = await fetch(`${BACKEND_URL}/chat`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -78,12 +75,12 @@ async function sendMessage(message = chatInput.value.trim()) {
         const data = await response.json();
         console.log('Backend response:', data);
 
-        const botResponse = data.answer || "Hmm, no response. Try again?"; // Use data.answer as per your FastAPI response_model
+        const botResponse = data.answer || "Hmm, no response. Try again?"; 
         addMessageToChat(botResponse, false); // Add bot response
 
     } catch (error) {
         console.error("Error sending message:", error);
-        removeTypingIndicator(); // Ensure indicator is removed even on error
+        removeTypingIndicator(); 
         addMessageToChat("Sorry, I'm having trouble connecting to the server. Please try again later.", false);
     }
 }
@@ -112,7 +109,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Handle quick question buttons
     quickQuestionButtons.forEach((button) => {
-        // Ensure we don't attach listener to the main send button if its ID is 'sendMessageButton'
         if (button.id !== 'sendMessageButton') {
             button.addEventListener("click", () => {
                 const question = button.textContent.trim();
@@ -126,7 +122,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial welcome message
     addMessageToChat("👋 Welcome to Totot! Ask me anything about our dishes or services.", false); // Changed to bot message style
 
-    // Add some CSS for typing animation dynamically (if not already in a CSS file)
     const style = document.createElement('style');
     style.textContent = `
         .typing-dots span {
